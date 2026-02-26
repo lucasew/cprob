@@ -8,7 +8,7 @@ clang = "17.0.6"
 PATH = "{{env.HOME}}/go/bin:{{env.PATH}}"
 
 [tasks.install]
-run = "go install github.com/lucasew/workspaced@latest && cmake -S . -B build -G Ninja"
+run = "go install github.com/lucasew/workspaced@v0.1.5 && cmake -S . -B build -G Ninja"
 description = "Install dependencies (workspaced, cmake)"
 
 [tasks.codegen]
