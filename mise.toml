@@ -1,0 +1,30 @@
+[tools]
+cmake = "3.29.9"
+ninja = "1.12.1"
+clang = "17.0.6"
+node = "20.19.6"
+"npm:workspaced" = "0.1.0"
+
+[tasks.install]
+run = "echo 'No external dependencies to install (using CMake).'"
+description = "Install dependencies"
+
+[tasks.codegen]
+run = "echo 'No codegen steps defined.'"
+description = "Update generated code"
+
+[tasks.lint]
+run = "workspaced codebase lint"
+description = "Lint the codebase"
+
+[tasks.fmt]
+run = "workspaced codebase format"
+description = "Format the codebase"
+
+[tasks.test]
+run = "cmake -S . -B build -G Ninja && cmake --build build && ctest --test-dir build --output-on-failure"
+description = "Build and run tests"
+
+[tasks.ci]
+depends = ["lint", "test"]
+description = "Run CI pipeline"
