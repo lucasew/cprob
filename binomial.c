@@ -3,7 +3,7 @@
  */
 #include <math.h>
 #include "base.h"
-#include "bernoulli.h"
+#include "bernoulli.c"
 // E(X)
 double bin_get_esperanca(int n, double p) {
     return n*p;

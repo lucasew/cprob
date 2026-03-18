@@ -13,7 +13,7 @@ endfunction()
 
 add_component(base)
 add_component(bernoulli)
-add_component(binomial cprob_base cprob_bernoulli m)
+add_component(binomial cprob_base m)
 add_component(geometric m)
 add_component(pascal m cprob_base)
 add_component(poisson m cprob_base)
