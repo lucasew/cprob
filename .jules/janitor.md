@@ -1,0 +1,1 @@
+- 2026-03-23: Always declare cmake_minimum_required before project and use explicit source file extensions in add_library to avoid CMake warnings.

@@ -1,10 +1,10 @@
-project(cprob LANGUAGES C)
 cmake_minimum_required(VERSION 3.10)
+project(cprob LANGUAGES C)
 
 enable_testing()
 
 function(add_component name)
-    add_library(cprob_${name} ${name})
+    add_library(cprob_${name} ${name}.c)
     target_link_libraries(cprob_${name} ${ARGN})
     add_executable(test_cprob_${name} test.c test_${name}.c)
     target_link_libraries(test_cprob_${name} cprob_${name})
